@@ -1,8 +1,15 @@
+import { ThemeProvider } from 'styled-components';
+import { defaultTheme } from './styles/themes/default';
+import { Button } from './components/Button';
+
 export function App() {
   return (
-    <div>
-      <h1>Delta Timer</h1>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="success" />
+      <Button variant="danger" />
+    </ThemeProvider>
   )
 }
 
